@@ -1,3 +1,5 @@
-rootProject.name = "KotlinProjectTemplate"
+rootProject.name = "certificate-system"
 include("bom")
-include("template")
+include("cert-cli")
+include("cert-core")
+include("cert-desktop")
