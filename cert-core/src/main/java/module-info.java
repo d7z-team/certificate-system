@@ -1,6 +1,5 @@
-module gradle.kotlin.template {
+module org.d7z.cert.core {
     requires kotlin.reflect;
     requires kotlin.stdlib;
-    opens com.github.template;
-    exports com.github.template;
+    exports org.d7z.cert.core;
 }

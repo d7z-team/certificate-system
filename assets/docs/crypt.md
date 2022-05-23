@@ -18,15 +18,12 @@
 
 ## 扩展
 - HKDF
-- 
+- noiseprotocol
 
 ## 封装
-- x.509
+- x.509 导出
 - 自定义封装
 
-## 扩展
-- noiseprotocol
-- 
 
 ## 参考
 

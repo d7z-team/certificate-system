@@ -28,3 +28,20 @@ tasks.register("clean", Delete::class) {
         delete(childProject.buildDir)
     }
 }
+
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint") // Version should be inherited from parent
+    configurations.all {
+        val versions = contextVersions("version")
+        if (!name.startsWith("ktlint")) {
+            resolutionStrategy {
+                eachDependency {
+                    // Force Kotlin to our version
+                    if (requested.group == "org.jetbrains.kotlin") {
+                        useVersion(versions["kotlin"])
+                    }
+                }
+            }
+        }
+    }
+}
